@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tyuiu.MarinenkovaKD.Sprint1.Task5.V1.Lib;
 
-using Tyuiu.MarinenkovaKD.Sprint1.Task4.V23.Lib;
-
-namespace Tyuiu.MarinenkovaKD.Sprint1.Task4.V23
+namespace Tyuiu.MarinenkovaKD.Sprint1.Task5.V1
 {
     class Program
     {
@@ -17,31 +16,38 @@ namespace Tyuiu.MarinenkovaKD.Sprint1.Task4.V23
             Console.Title = "Спринт #1 | Выполнила: Мариненкова К. Д. | ИСТНб-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #1                                                               *");
-            Console.WriteLine("* Тема: Class Math                                                        *");
-            Console.WriteLine("* Задание #4                                                              *");
-            Console.WriteLine("* Вариант #23                                                             *");
+            Console.WriteLine("* Тема: Преобразование типов и класс Convert                              *");
+            Console.WriteLine("* Задание #5                                                              *");
+            Console.WriteLine("* Вариант #1                                                              *");
             Console.WriteLine("* Выполнила: Мариненкова Кристина Дмитриевна | ИСТНб-23-1                 *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая запрашивает у пользователя исходные данные, *");
-            Console.WriteLine("* вычисляет результат по формуле √|x+y|/|3−x| и печатает его на экране.   *");
+            Console.WriteLine("* Найти расстояние между двумя точками с заданными координатами (x, y).   *");
+            Console.WriteLine("* Ответ привести к целому с помощью класса Convert.                       *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            int x, y;
+            int x1, y1, x2, y2;
 
-            Console.WriteLine("Введите значение X:");
-            x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите значение Y:");
-            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение X1:");
+            x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение Y1:");
+            y1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите значение X2:");
+            x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение Y2:");
+            y2 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine($"√|{x} + {y}|/|3 - {x}| = " + Math.Round(ds.Calculate(x, y), 3));
+            int res = Convert.ToInt32(ds.DistanceBetweenDots(x1, y1, x2, y2));
+            Console.WriteLine(res);
+
             Console.ReadLine();
         }
     }
